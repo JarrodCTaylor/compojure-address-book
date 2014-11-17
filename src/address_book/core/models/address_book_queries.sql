@@ -7,6 +7,16 @@ SELECT * FROM contacts;
 INSERT INTO contacts (name, phone, email)
     VALUES (:name, :phone, :email);
 
+-- name: delete-contact<!
+-- Deletes a single contact
+DELETE FROM contacts
+    WHERE id = :id;
+
+-- name: update-contact<!
+-- Update a single contact
+UPDATE contacts SET name = :name, phone = :phone, email = :email
+    WHERE id = :id;
+
 -- name: drop-contacts-table!
 -- drop the contacts table
 DROP TABLE contacts;
