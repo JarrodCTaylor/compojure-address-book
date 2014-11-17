@@ -1,7 +1,175 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
 body {
-  background-color: #BCE5FF
+  background-color: #333333;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-h1 {
-  color: #FF6967;
+#wrapper {
+  margin: 0 auto;
+  width: 960px;
+}
+
+#content-title {
+  color: #F8F8F8;
+  font-size: 45px;
+  margin: 15px 0;
+}
+
+#contacts {
+  background-color: #FFFDF7;
+  border-radius: 3px;
+  margin: 0 auto;
+  width: 960px;
+}
+
+#contacts .contact {
+  font-weight: 700;
+  font-size: 20px;
+  color: #595959;
+  border-bottom: 1px solid #909090;
+  border-radius: 3px;
+  padding: 15px;
+}
+
+#contacts .header {
+  background-color: #CFCED4;
+  border-radius: 3px;
+  font-size: 23px;
+}
+
+.contact-text {
+  top: 3px;
+  position: relative;
+}
+
+.icon-style {
+  color: #909090;
+  padding: 0px 5px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+/* -- COLUMNS -- */
+.column-1 {
+  float: left;
+  width: 280px;
+}
+
+.column-2 {
+  float: left;
+  width: 240px;
+}
+
+.column-3 {
+  float: left;
+  width: 300px;
+}
+
+.button-group {
+  float: right;
+  margin-top: -5px;
+  margin-bottom: -40px;
+}
+
+.clear-row {
+  clear: both;
+}
+
+/* -- BUTTONS -- */
+.button {
+  background-color: #FFFDF7;
+  border: 1px solid #3E3E3e;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 15px;
+  height: 35px;
+  width: 35px;
+}
+
+.button.remove {
+  position: relative;
+  top: -35px;
+  margin-bottom: 0px;
+}
+
+.button.remove:hover {
+  background: #E65200;
+}
+
+.button.edit {
+  left: -42px;
+  position: relative;
+}
+
+.button.edit:hover {
+  background: #E68D00;
+}
+
+.button.update {
+  color: #FFFDF7;
+  background: #6D597D;
+  padding: 7px 12px;
+  width: 78px;
+}
+
+.button.update:hover {
+  background: #567C6F;
+}
+
+.button.add {
+  background: #6D597D;
+  color: #FFFDF7;
+  float: right;
+  margin-bottom: -10px;
+  top: -5px;
+  padding: 7px 22px;
+  position: relative;
+  width: 78px;
+}
+
+.button.add:hover {
+  background: #567C6F;
+}
+
+/* -- INPUTs -- */
+input {
+  border: none;
+  border-bottom: 1px solid gray;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #595959;
+}
+
+#name-input {
+  background-color: #FFFDF7;
+  width: 230px;
+}
+
+#phone-input {
+  background-color: #FFFDF7;
+  width: 170px;
+}
+
+#email-input {
+  background-color: #FFFDF7;
+  width: 250px;
+}
+
+::-webkit-input-placeholder {
+  color: #909090;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: #909090;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: #909090;
+}
+
+:-ms-input-placeholder {
+  color: #909090;
 }
