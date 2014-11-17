@@ -1,6 +1,7 @@
 # address-book
 
-FIXME
+The code found here corresponds with part 1 of the compojure address book
+blog series found at [Compojure-Address-Book-Part-1/](www.jarrodctaylor.com/posts/Compojure-Address-Book-Part-1/)
 
 ## Prerequisites
 
@@ -8,12 +9,12 @@ You will need [Leiningen][] 2.0.0 or above installed.
 
 [leiningen]: https://github.com/technomancy/leiningen
 
-## Running
+## Running the application locally
 
 To start a web server for the application, run:
 
-    lein ring server
+    `lein ring server`
 
-## License
+## Running the tests
 
-Copyright © 2014 FIXME
+    `lein midje`
