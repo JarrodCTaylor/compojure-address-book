@@ -1,7 +1,7 @@
 # address-book
 
-The code found here corresponds with part 1 of the compojure address book
-blog series found at [Compojure-Address-Book-Part-1/](www.jarrodctaylor.com/posts/Compojure-Address-Book-Part-1/)
+The code found here corresponds with part 2 of the compojure address book
+blog series found at [Compojure-Address-Book-Part-2/](www.jarrodctaylor.com/posts/Compojure-Address-Book-Part-2/)
 
 ## Prerequisites
 

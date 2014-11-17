@@ -9,7 +9,7 @@
   (fact "Test GET"
     (let [response (app (mock/request :get "/"))]
       (:status response) => 200
-      (:body response) => "Example GET"))
+      (:body response) => (contains "Example GET")))
 
   (fact "Test POST"
     (let [response (app (mock/request :post "/post" {:example-post "Some data"}))]
