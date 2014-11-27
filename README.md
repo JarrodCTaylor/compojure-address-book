@@ -15,14 +15,14 @@ You will need [Leiningen][] 2.0.0 or above installed.
 
 You will need to set up your postgres database, run:
 
-    `psql -U <your_postgres_user> -f database.sql`
+    psql -U <your_postgres_user> -f database.sql
 
 ## Running the application locally
 
 To start a web server for the application, run:
 
-    `lein ring server`
+    lein ring server
 
 ## Running the tests
 
-    `lein midje`
+    lein midje
