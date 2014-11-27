@@ -1,7 +1,7 @@
 # address-book
 
 This repo is an example address book application written in Clojure using
-ring/compojure. This code accompanies the blog series [Compojure-Address-Book](www.jarrodctaylor.com/posts/Compojure-Addredd-Book-Part-1/)
+ring/compojure. This code accompanies the blog series [Compojure-Address-Book](http://www.jarrodctaylor.com/posts/Compojure-Address-Book-Part-1/)
 
 # Finished application
 
