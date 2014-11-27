@@ -13,6 +13,10 @@ You will need [Leiningen][] 2.0.0 or above installed.
 
 [leiningen]: https://github.com/technomancy/leiningen
 
+You will need to set up your postgres database, run:
+
+    `psql -U <your_postgres_user> -f database.sql`
+
 ## Running the application locally
 
 To start a web server for the application, run:
