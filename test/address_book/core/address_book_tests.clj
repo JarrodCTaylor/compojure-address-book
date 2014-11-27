@@ -21,6 +21,15 @@
         (:body response) => (contains "<div class=\"column-1\">JT</div>")
         (:body response) => (contains "<div class=\"column-1\">Utah</div>"))))
 
+  (fact "Test GET request to /edit/:contact-id route returns only requested contact"
+    (with-redefs [db test-db]
+      (query/insert-contact<! {:name "JT" :phone "(321)" :email "JT@JT.com"} {:connection test-db})
+      (query/insert-contact<! {:name "Utah" :phone "(432)" :email "J@Buckeyes.com"} {:connection test-db})
+      (let [response (app (mock/request :get "/edit/1"))]
+        (:status response) => 200
+        (:body response) => (contains "form action=\"/edit/1\" method=\"post\">")
+        (:body response) => (contains "<div class=\"column-1\">Utah</div>"))))
+
   (fact "Test POST to /post creates a new contact"
     (with-redefs [db test-db]
       (count (query/all-contacts {} {:connection test-db})) => 0
