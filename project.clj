@@ -29,4 +29,8 @@
              :dev-env-vars  {}
 
              :test [:test-local :test-env-vars]
-             :dev  [:dev-env-vars]})
+             :dev  [:dev-env-vars]
+
+             :production {:ring {:open-browser? false
+                                 :stacktraces?  false
+                                 :auto-reload?  false}}})
