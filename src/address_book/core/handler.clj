@@ -1,11 +1,12 @@
 (ns address-book.core.handler
-  (:require [compojure.core :refer [defroutes routes]]
+  (:require [compojure.core :refer :all]
             [compojure.route :as route]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
-            [address-book.core.routes.address-book-routes :refer [address-book-routes]]))
+            [address-book.core.routes.address-book-routes :refer [address-book-routes]]
+            [address-book.core.models.query-defs :as query]))
 
 (defn init []
-  (println "Address book application is starting"))
+  (query/create-contacts-table-if-not-exists!))
 
 (defroutes app-routes
   (route/not-found "Not Found"))

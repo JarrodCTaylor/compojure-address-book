@@ -3,19 +3,22 @@
   (:require [clojure.test :refer :all]
             [ring.mock.request :as mock]
             [address-book.core.handler :refer :all]
-            [address-book.core.routes.address-book-routes :refer [contacts]]))
+            [address-book.core.models.query-defs :as query]))
 
 (facts "Example GET and POST tests"
+  (with-state-changes [(before :facts (query/create-contacts-table-if-not-exists!))
+                       (after  :facts (query/drop-contacts-table!))]
 
   (fact "Test GET"
+    (query/insert-contact<! {:name "JT" :phone "(321)" :email "JT@JT.com"})
+    (query/insert-contact<! {:name "Utah" :phone "(432)" :email "J@Buckeyes.com"})
     (let [response (app (mock/request :get "/"))]
       (:status response) => 200
-      (:body response) => (contains "<div class=\"column-1\">Jarrod Taylor</div>")
-      (:body response) => (contains "<div class=\"column-1\">Johnny Utah</div>")
-      (:body response) => (contains "<div class=\"column-1\">James Dalton</div>")))
+      (:body response) => (contains "<div class=\"column-1\">JT</div>")
+      (:body response) => (contains "<div class=\"column-1\">Utah</div>")))
 
   (fact "Test POST"
-    (let [response (app (mock/request :post "/post" {:name "Bodhi" :phone "555-7890" :email "bells@beach.com"}))
-          new-contact (filter #(= 4 (:id %)) @contacts)]
+    (count (query/all-contacts)) => 0
+    (let [response (app (mock/request :post "/post" {:name "Some Guy" :phone "(123)" :email "a@a.cim"}))]
       (:status response) => 302
-      (:name (first new-contact)) => "Bodhi")))
+      (count (query/all-contacts)) => 1))))
