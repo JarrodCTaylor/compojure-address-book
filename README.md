@@ -1,7 +1,9 @@
 # address-book
 
-The code found here corresponds with part 4 of the compojure address book
-blog series found at [Compojure-Address-Book-Part-4/](www.jarrodctaylor.com/posts/Compojure-Address-Book-Part-4/)
+[![Dependencies Status](http://jarkeeper.com/JarrodCTaylor/compojure-address-book/status.svg)](http://jarkeeper.com/JarrodCTaylor/compojure-address-book)
+
+This repo is an example address book application written in Clojure using
+ring/compojure. This code accompanies the blog series [Compojure-Address-Book](http://www.jarrodctaylor.com/posts/Compojure-Address-Book-Part-1/)
 
 # Finished application
 
