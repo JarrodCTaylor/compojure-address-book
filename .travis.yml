@@ -2,7 +2,7 @@ language: clojure
 sudo: required
 lein: 2.8.1
 before_script:
-  - psql -f provision_example_database.sql
+  - psql -U postgres -f provision_example_database.sql
 script: lein with-profile test midje
 jdk:
   - oraclejdk8
