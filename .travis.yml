@@ -1,0 +1,10 @@
+language: clojure
+sudo: required
+lein: 2.8.1
+before_script:
+  - psql -U postgres -f provision_example_database.sql
+script: lein with-profile test midje
+jdk:
+  - oraclejdk8
+services:
+  - postgresql
